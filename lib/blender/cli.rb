@@ -27,9 +27,27 @@ module ::Blender
 =end
       private
       def blender_execution_file_path
-        ::Dir.glob "./ext/blender_cli/**/blender" do | file_path |
+        ::Dir.glob "#{ ext_dir_path }/blender_cli/**/blender" do | file_path |
           return file_path
         end
+      end
+
+=begin
+  @function
+  @private
+=end
+      private
+      def ext_dir_path
+        return ::File.expand_path("../../../ext", __FILE__)
+      end
+
+=begin
+  @function
+  @private
+=end
+      private
+      def lib_dir_path
+        return ::File.expand_path("../../../lib", __FILE__)
       end
     end
   end
