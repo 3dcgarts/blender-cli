@@ -1,10 +1,6 @@
-/.bundle/
-/.yardoc
-/Gemfile.lock
-/_yardoc/
-/coverage/
-/doc/
-/ext/blender_cli/blender*
-/pkg/
-/spec/reports/
-/tmp/
+.bundle
+Gemfile.lock
+ext/blender_cli/blender*
+pkg
+spec/reports
+tmp
