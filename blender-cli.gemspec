@@ -5,13 +5,13 @@ require 'blender/cli/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "blender-cli"
-  spec.version       = Blender::Cli::VERSION
+  spec.version       = Blender::CLI::VERSION
   spec.authors       = ["Takahiro INOUE"]
   spec.email         = ["takahiro.inoue@aist.go.jp"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{CLI tools for blender.}
+  spec.description   = %q{CLI tools for blender.}
+  spec.homepage      = "https://3dcg-arts.net"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
@@ -26,8 +26,12 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+  spec.extensions    = %w[ext/blender_cli/extconf.rb]
+
+  spec.add_dependency "thor", "~> 0.19.1"
 
   spec.add_development_dependency "bundler", "~> 1.11"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "rake-compiler", "~> 0.9.5"
   spec.add_development_dependency "rspec", "~> 3.0"
 end

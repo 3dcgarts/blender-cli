@@ -4,6 +4,7 @@
 /_yardoc/
 /coverage/
 /doc/
+/ext/blender_cli/blender*
 /pkg/
 /spec/reports/
 /tmp/
